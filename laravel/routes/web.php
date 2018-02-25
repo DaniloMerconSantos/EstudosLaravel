@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/hello/{name?}', 'HelloController@index');
+Route::post('/hello/{name?}', 'HelloController@render');
+
+Route::resource('pages', 'Admin\PagesController');
